@@ -14,7 +14,7 @@ const ConverterForm = props => {
                 </select>
                 <input type='text' id='baseCurrencyAmt'></input>
                 <label>Converted Currency:</label>
-                <select id='conversionSelect'>
+                <select id='conversionSelect' onChange={() => {document.getElementById('convertedCurrencyAmt').value = ''}}>
                     {props.currencies.map((currency, index) => {
                         return <option key={index} value={currency}>{currency}</option>
                     })}
